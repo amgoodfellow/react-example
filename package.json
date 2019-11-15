@@ -13,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "npx prettier --write \"src/**/*.js\""
   },
   "browserslist": {
     "production": [
@@ -26,5 +27,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
   }
 }

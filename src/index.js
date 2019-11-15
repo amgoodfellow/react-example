@@ -1,13 +1,12 @@
 // Every file needs to import react so we have access to all its classes/lifecycle methods
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 // These imports are from Material-UI a component and style library we use in all of our
 // react projects. We can create a default theme on a per-project basis with MUI's function
 // createMuiTheme
 import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
-
 
 // To keep the look of all of our frontends consistent, we define the same palette for each
 // project. That way the color scheme is always consistent
@@ -34,7 +33,6 @@ const theme = createMuiTheme({
 // To allow for easy copy/pasting, root element id's correspond to project name
 const project_name = 'react-example'
 
-
 // This needs to be called in order for the project to insert itself into our HTML page.
 // `document.getElementById` is vanilla JavaScript. In your HTML, you'll have to have some
 // element with the id matching the one in here. React will render itself inside that element.
@@ -44,4 +42,5 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
   </ThemeProvider>,
-  document.getElementById(project_name));
+  document.getElementById(project_name)
+)

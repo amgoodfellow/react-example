@@ -1,0 +1,30 @@
+* API Folder
+
+** Purpose:
+This folder is where all network requests should be kept. In most of our projects, we'll have a single =api.js= file that exports multiple network request functions. As an example, the file should contain functions of the following form:
+
+#+begin_src javascript
+  // Snooze a notification on the backend
+  export const snooze = async id => {
+    try {
+      const response = await fetch('/notifications/v1/snooze/' + id, {
+        credentials: 'include',
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          Authorization: 'Bearer ' + token
+        }
+      })
+      return await response.json()
+    } catch (err) {
+      console.error(err)
+      return err
+    }
+  }
+#+end_src
+
+Functions can then be imported from this file with the following syntax:
+
+#+begin_src javascript
+import { snooze } from './api.js'
+#+end_src
