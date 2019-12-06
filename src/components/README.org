@@ -1,0 +1,5 @@
+* Components Folder
+** Purpose
+This folder is dedicated to all of your non =App.js= React components. When making a React project, your goal should be to divide the user interface into a collection of functional, independent components. They should all make up some portion of the display, and in /most/ cases you should have one component per file
+
+For very large projects, it might be necessary to break the =components= folder into some nested folder structure. However, this has not yet been necessary for any of our React projects. Make sure that if you find yourself doing this, it's actually necessary. Remember that the goal should be a simple project - don't sacrifice that for the sake of breaking things up into multiple files

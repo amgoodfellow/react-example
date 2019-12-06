@@ -1,0 +1,35 @@
+#+TITLE: Basic React Example
+#+SUBTITLE: For Oakland University Technology Services developer onboarding 
+
+* Purpose
+This project was created to give new developers for OU-UTS an example React project that they can clone down and edit. 
+
+Unlike other example react projects out there, this one has several OU specific features. Among them are:
+- The use of our preferred component/styling library, [[eww:www.material-ui.com][Material-UI]]
+  - Gives a brief example on how to set up a project with OU's color-scheme
+  - Gives a couple examples of how we use common components in a typical project
+- The file structure (src -> api/, components/, utils/) is one that we use in /all/ of our React projects
+  - Each folder contains a README at the root explaining what sort of components one can expect to see in that folder
+- An example of a component using classes, and a very similar one using hooks, since OU maintains repos using both styles 
+- Everything is heavily-commented so hopefully even those who've never seen a React project before will be able to figure out what's going on
+
+Before this repo, I tended to make small examples on a case-by-case basis, but I figured a single repo where suggestions are carried over from
+each new developer who uses it, would be a lot more efficient going forward.
+
+* Running Locally
+To run the project locally, you'll need to have =npm= and =nodejs= installed on your machine.
+
+Once you've got that, simply clone down the project and run the following commands:
+
+#+begin_src shell
+  git clone https://www.github.com/amgoodfellow/react-example
+  cd react-example
+  npm i && npm start
+#+end_src
+
+That should start a little node server running on =localhost:3000=
+
+* Disclaimer
+I'm by no means a React expert, and this tutorial might not be terribly up to date. I believe it was originally made some time in 2017 or 
+early 2018, and I don't update it too consistently. The main point is to get a sense of how state and lifecycle methods work - and those 
+things aren't likely to change much as time goes on.
