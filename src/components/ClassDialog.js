@@ -1,5 +1,5 @@
 // We import React and React.Component to use JSX and React's lifecycle methods
-// Note: React.Component is used for /class-based/ React Components
+// Note: React.Component is used for class-based React Components
 // If we were using React Hooks, we wouldn't need to import Component
 import React, { Component } from 'react'
 // All this other nice stuff comes from material-ui
@@ -37,7 +37,7 @@ class ClassDialog extends Component {
     // https://reactjs.org/docs/react-component.html#componentdidmount
   }
 
-  // After the other lifecycle methods, but /before/ render(), we can put our custom
+  // After the other lifecycle methods, but before render(), we can put our custom
   // methods. It's usually a good idea to use arrow functions here so the function is
   // bound to `this` context
 
@@ -54,7 +54,7 @@ class ClassDialog extends Component {
   }
 
   render() {
-    // This is called Object Destructuring - it's /super/ convenient when dealing with
+    // This is called Object Destructuring - it's super convenient when dealing with
     // state variables. You can read more about it here:
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
     const { message, open } = this.state

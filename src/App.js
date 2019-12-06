@@ -1,5 +1,5 @@
 // We import React and React.Component to use JSX and React's lifecycle methods
-// Note: React.Component is used for /class-based/ React Components
+// Note: React.Component is used for class-based React Components
 //       If we were using React Hooks, we wouldn't need to import Component
 import React, { Component } from 'react'
 // All this other nice stuff comes from material-ui
@@ -48,6 +48,8 @@ class App extends Component {
 
     // Depending on what the state variable `type` equals, our React will render different things
     return (
+      // There has to be one parent container - you can't render two top-level components 
+      // In this case that container is a div 
       <div
         className='parent-div'
         style={{

@@ -1,12 +1,21 @@
 * API Folder
 
 ** Purpose:
-This folder is where all network requests should be kept. In most of our projects, we'll have a single =api.js= file that exports multiple network request functions. As an example, the file should contain functions of the following form:
+This folder is where all network requests should be kept. In most of our projects, we'll have a 
+single =api.js= file that exports multiple network request functions. As an example, the file 
+should contain functions of the following form:
 
 #+begin_src javascript
-  // Snooze a notification on the backend
+  // All of these functions will be exported from the file (like public static functions)
+  // The async keyword means that this function will execute asynchronously (in older JS we'd have
+  // to deal with resolving promises. Now we can use the await keyword)
+  // `id` is a param being passed to the function
   export const snooze = async id => {
+    // If our HTTP request returns some sort of error code, it'll be caught and the error
+    // will be returned to the calling function
     try {
+      // This is a a fetch request. Read more about it at the link below:
+      // developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
       const response = await fetch('/notifications/v1/snooze/' + id, {
         credentials: 'include',
         method: 'POST',
